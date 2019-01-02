@@ -1,0 +1,184 @@
+<!doctype html>
+
+
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>把加密算法本身保密起来，不就是绝对安全了？</title>
+<meta name="apple-itunes-app" content="app-id=639087967, app-argument=zhihudaily://story/8672587">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/css/share.css?v=5956a">
+
+
+<script src="http://static.daily.zhihu.com/js/modernizr-2.6.2.min.js"></script>
+<link rel="canonical" href="http://daily.zhihu.com/story/8672587"/>
+<base target="_blank">
+<script type="text/javascript">
+if (localStorage && localStorage.getItem('hideDownloadBanner') !== 'true') {
+document.documentElement.className += ' show-download-banner';
+}
+</script>
+</head>
+<body>
+
+<div class="global-header">
+<div class="main-wrap">
+<div class="download">
+<a href="https://itunes.apple.com/cn/app/id639087967?mt=8" class="button" data-device="ios"><i class="sprite-ico-Button_iPhone2x"></i> <span>iPhone</span></a>
+<a href="/download/android" class="button" data-device="android-local"><i class="sprite-ico-Button_Android2x"></i> <span>Android</span></a>
+</div>
+<a href="/" target="_self" title="知乎日报"><i class="web-logo"></i></a>
+</div>
+</div>
+<div class="header-for-mobile">
+<a href="/download" class="header-for-mobile-download-link">
+<span class="header-for-mobile-btn">立即下载</span>
+<img class="header-for-mobile-logo-img" src="http://static.daily.zhihu.com/img/app-logo.png"/>
+<span class="header-for-mobile-title">知乎日报</span>
+<span class="header-for-mobile-meta">每日提供高质量新闻资讯</span>
+</a>
+</div>
+<div class="main-wrap content-wrap">
+<div class="headline">
+
+<div class="img-wrap">
+<h1 class="headline-title">把加密算法本身保密起来，不就是绝对安全了？</h1>
+
+
+<span class="img-source">图片：《模仿游戏》</span>
+
+
+<img src="http://pic2.zhimg.com/43603153ed6af331aa7ff19f1a007a29.jpg" alt="">
+<div class="img-mask"></div>
+</div>
+
+
+</div>
+
+<div class="content-inner">
+
+
+
+
+<div class="question">
+<h2 class="question-title">在有限专家间评议加密算法是不是比直接公开更安全？</h2>
+
+<div class="answer">
+
+<div class="meta">
+<img class="avatar" src="http://pic3.zhimg.com/a064911c2_is.jpg">
+<span class="author">林建入，</span><span class="bio">软件设计</span>
+</div>
+
+<div class="content">
+<p>这是一个经典问题了，常常被问起。其他回答有些已经从专业角度进行了阐述。我尝试从通俗的角度再补充一下。</p>
+<p><strong>一、应用于大众领域的密码学却要实现算法保密？一个不可能的任务</strong></p>
+<p>一提起密码学，大家第一反应是联想到战争、军事，但如今的世界，密码学最广泛也是最基本的用途却是在保护普通人的通信安全&mdash;&mdash;比如让你在使用网银的时候密码不会被其他人截获进而偷走你的钱。</p>
+<p>站在这个角度看，很快就会发现，要想让全世界 70 亿人口仰仗一种不公开的加密算法隐约存在一些障碍。不过，在开始讨论之前，我们还是先做一些非常非常理想（而不切实际的）假设：</p>
+<p>1、算法的缔造者是顶级专家具有深入的知识</p>
+<p>2、算法没有包含任何的后门，不会被特殊的政治集团利用</p>
+<p>3、算法的保密性极佳没有任何机构有能力窃取</p>
+<p>4、全世界一致同意接受这一算法</p>
+<p>在如此乌托邦般理想的背景下，全世界满心欢喜，翘首以待，希望立刻使用这一算法来保障全世界的通信安全！（此处应有 BGM，世界 500 强 CEO 欢聚一堂纷纷竖起大拇指对提出这一算法天才致以最高的敬意&mdash;&mdash;虽然并没有人知道他是怎么做到的&mdash;&mdash;而且我也不清楚大家怎么就能如此单纯的相信他说的是真的&hellip;&hellip;）</p>
+<p>就在这欢声笑语一片祥和，世界大同的瞬间，有一个工程师突然发现了一个问题&mdash;&mdash;怎么才能把这个算法用起来呢？另一个工程师也恍然大悟，一拍大腿脱口而出：是啊，算法他妈的根本没公开啊！</p>
+<p>全世界都愣住了，光忙着庆祝，却忽略了一个问题&mdash;&mdash;除了算法的作者谁也不知道怎么去加密和解密，没人能写出算法！怎么办？</p>
+<p>这时候隔壁老王提提裤子站了起来，提议由算法的发明人，定制一种硬件芯片，秘密制造，然后在不公开其硬件构造的情况下，统一分发给大家！</p>
+<p>热烈的掌声，经久不息。但老张不乐意了，老张站起来缓缓道：硬件好是好，但是我们公司的几亿台嵌入式设备已经在运行，要升级硬件难度太大。首先你的芯片有多大，尺寸太大肯定不行，我们的设备体积有限；耗电多少，太耗电那也行不通；速度呢，能达到每秒处理 X Mbit 吗？我们的系统是硬实时系统，响应时间不能超过 Y ms&hellip;&hellip;如果可以，还有个问题，价格呢？如果太贵，我们怕是要破产。而且硬件的东西，做上去就无法更改了，你们最好一次做对，要是出问题想改那也是难呐&hellip;&hellip;</p>
+<p>会场陷入了一片沉默&hellip;&hellip;一些工程师开始交头接耳。老张顿了顿，说道：可以搞软件的嘛，提供一个预编译好的二进制库给我们就行了，这样我们不用升级硬件，也能用上这项伟大的发明！</p>
+<p>算法的发明人经过短暂的考虑，微笑着点点头表示了同意。笑容又出现在每个人的脸上。除了会场角落的一群人&hellip;&hellip;</p>
+<p>他们轻蔑的看着狂欢的人群，为他们的天真报以最深的同情&mdash;&mdash;这是一群安全研究人员，就在上个月，他们破解了一个被认为&ldquo;绝对安全&rdquo;的芯片，完全逆向出了其中的算法。在他们眼中，这场闹剧虽然可笑，但却也是一个发家致富的绝佳机会&hellip;&hellip;</p>
+<p>讲这个段子只是为了提醒你：</p>
+<ol>
+<li>任何保密的算法一旦变成了硬件，就有可能被逆向还原</li>
+<li>同上，任何保密算法一旦变成了软件，就有可能被逆向还原（实际上不是有可能而是一定可以）</li>
+<li>上述两条在可以预见的未来依然成立</li>
+</ol>
+<p>所以结论：算法的保密性在现实世界行不通。甚至可以说，任何想要大规模广泛应用保护几十亿人的密码学算法，都根本无法实现保密，最终不管是你愿意还是不愿意都会公开。原因是，算法要给人用，就要变为硬件或者软件，而这二者都不安全，可以通过研究它们逆向还原出算法。</p>
+<p><strong>二、通过严密的管理措施在军事上实现算法保密？另一种幻想</strong></p>
+<p>上面聊完了民用，我们知道一点，一旦需要［广泛］应用一种加密算法，那么保密就是不可能的。接下来我们考虑军事环境下，能否实现加密算法的保密呢？</p>
+<p>在理想的世界里，好人和坏人泾渭分明；英雄的意志如同钢铁般从不会被诱惑；每一个兢兢业业的军人如同机器般准确，从不犯错&hellip;&hellip;</p>
+<p>可惜现实世界里的军队绝非如此，光是间谍问题就解决不了。间谍也许偷不走你的算法设计文档，但他 / 她可以偷走你安装了相应加解密芯片的设备，于是问题又回到和前述类似的情况，你的算法很可能被逆向还原&hellip;&hellip;</p>
+<p>而更实际的情况其实是，在军事领域，直接收买 / 绑架 / 威胁相关人员更加方便，破解芯片有时候反而纯属多余。这方面二战中已经数不胜数。都是血泪教训。</p>
+<p><strong>三、可是，如果公开的是安全的，那么我将其再做保密不是［更加］安全么？一个思维陷阱</strong></p>
+<p>这可能是提问者最困惑的问题。这就相当于，如果你们口口声声说公开的最安全，那么我把它再做一层保护，也就是保密起来，那不是双保险？！</p>
+<p>这样的想法，其实是一种变相的循环论证：</p>
+<ol>
+<li>一个算法，敢叫安全的，一个专家说了不算，十个也不算，所有专家都这么说才算，所以你得［公开］了，最后才敢叫安全</li>
+<li>你都保密了，就没有人知道它到底安全不安全，只有一小撮人［认为］它安全，所以你保密的是一个［安全］的算法吗？也许是，也许不是</li>
+<li>历史经验证明，发明安全的算法难度之高，远超想象，由此可知，在 2 的情况下，你小心翼翼维护的所谓［安全］算法 99.99％ 其实是个不堪一击的东西</li>
+</ol>
+<p>所以，根本原因是，<strong>安全不是［天生］属性，而是公开后［实践］赋予的衍生属性。你无法在保密一个东西的同时确定它是安全的，你只能［自认为］它是。</strong></p>
+<p><strong>四、别忘了，公开挑战全世界并获胜是现代密码学胆敢声称安全的唯一标准</strong></p>
+<ol>
+<li>现实世界的任何加密算法赋予的安全性都是［有限］的，实际上加密算法只是在不断的抬升［破解的代价］而已，主要是时间代价</li>
+<li>因此完美的，绝对的加密算法在现实世界不存在</li>
+<li>由上可知，几乎没有人真正能够判定一个加密算法是否［安全］，只能以有限的知识对其进行估计，但经过大众的参与，一些久经考验的加密算法被发现［很难］破解，我们才可以谨慎认为它们相对安全</li>
+</ol>
+<p>仔细想想就会发现，其实现代密码学最大的进步就是承认了不完美，这一点可以说是经典密码学到现代密码学精神内核上最本质的区别，也改变了密码学研究的方向。究竟需要多大的胆量，才可以把自己的算法公之于众的同时，声称它是安全的？同时当全世界绞尽脑汁都无法将其撼动分毫时，作者内心会感受到多高的荣誉？</p>
+<p>这是一种极致的挑战精神。也是人类智慧的极致体现。</p>
+<p>五、反常提示</p>
+<p><em>无需知道加密算法，也可能构造出解密算法，这一点可能让很多人意外：</em></p>
+<p>加密算法本质都是一个函数 F。而与其相对的解谜算法可以称为 F'。这很好理解。问题是，构造 F' 一定要知道 F 吗？能否在不知道原始加密算法的情况下，直接构造一个函数来实现和 F' 相同的解密功能？实际上是有可能的，如果有大量的明文和密文对（这个条件通常很容易满足），然后 F 满足特定的数学性质，那么就可以找到一个 U 函数，实现 F' 的功能。</p>
+<p><em>重复加密多次，或者混用多种不同的加密算法，可能降低安全性：</em></p>
+<p>如果加密一次会变得安全的话，那么加密两次、三次、四次呢？是否更加安全？事实上可能恰恰相反，安全性有可能反而降低。混用加密算法也会带来此类问题。这一点也常常让人意外。</p>
+<p><em>密钥长度越长越安全？不一定：</em></p>
+<p>特定的加密算法，某些长度的密钥有助于增强安全性，而另一些则会削弱，这实际是一个很复杂的问题。实际上好的加密算法至少保证密钥长度增长的同时安全性增强，但许多算法并不能在这方面给予保证，让人很意外。</p>
+<p><em>同一个加密算法，选择两个相同长度的密钥 X 和 Y，它们加密出来的结果一样安全吗？不一定：</em></p>
+<p>存在弱密钥，不幸选中这些密钥会导致安全性下降，有时问题可能会很严重。</p>
+<p>其它各种坑就不说了，请参考专业书籍&hellip;&hellip;你了解的越多，你终将会发现，密码学真的非常非常复杂，因此如果谁胆敢声称安全，即使是这个行业的顶级人员，也常常被打脸。一般只敢提出一些新想法启发思路。而证明其安全性是一个很漫长的过程。</p>
+<p>没有哪个小圈子强大到提问者想象的那个理想程度。</p>
+</div>
+</div>
+
+
+<div class="view-more"><a target="_self" href="http://www.zhihu.com/question/47316089">查看知乎原文<span class="js-question-holder" data-aid="82288"></span></a></div>
+
+</div>
+
+
+
+<div class="question">
+<div class="answer">
+<div class="content">
+<p>客官，这篇文章有意思吗？</p>
+<p dir="ltr"><a href="https://daily.zhihu.com/download?utm_source=article_suffix&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">好玩！下载 App 接着看 (๑&bull;ㅂ&bull;) ✧</a></p>
+<p><a href="/story/8663640?utm_source=other_article&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">再逛逛吧 ˊ_&gt;ˋ</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="qr">
+<h2 class="heading">扫描二维码下载知乎日报</h2>
+<span class="subheading">支持 iOS 和 Android</span>
+<div class="qr-wrap">
+<img src="http://static.daily.zhihu.com/img/qr1.png" alt="二维码下载知乎日报" width="148" height="148">
+</div>
+</div>
+</div>
+
+<div class="bottom-wrap">
+<div class="bottom-recommend">
+<span class="bottom-recommend-title">阅读更多</span>
+<a class="recommend-link" href="http://daily.zhihu.com/story/8906679" data-story="8906679">
+
+<span style="background-image:url(http://pic4.zhimg.com/e8d8b94a0ea530c6c3eedf465fc8901b.jpg)" class="link-image"></span>
+
+得了一种叫口腔溃疡的绝症，医生给了几条建议
+</a>
+<a class="bottom-recommend-download-link" href="/download">
+下载 「知乎日报」 客户端查看更多
+</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="http://www.zhihu.com/">知乎网</a> &middot; &copy; 2016 知乎
+</div>
+<script src="http://static.daily.zhihu.com/js/jquery.1.9.1.js"></script>
+<script src="/js/share.js?v=49768"></script>
+
+</body>
+</html>

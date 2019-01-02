@@ -1,0 +1,146 @@
+<!doctype html>
+
+
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>VR 实现 120 帧刷新，索尼这回又搞出黑科技了吗？</title>
+<meta name="apple-itunes-app" content="app-id=639087967, app-argument=zhihudaily://story/8641525">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/css/share.css?v=5956a">
+
+
+<script src="http://static.daily.zhihu.com/js/modernizr-2.6.2.min.js"></script>
+<link rel="canonical" href="http://daily.zhihu.com/story/8641525"/>
+<base target="_blank">
+<script type="text/javascript">
+if (localStorage && localStorage.getItem('hideDownloadBanner') !== 'true') {
+document.documentElement.className += ' show-download-banner';
+}
+</script>
+</head>
+<body>
+
+<div class="global-header">
+<div class="main-wrap">
+<div class="download">
+<a href="https://itunes.apple.com/cn/app/id639087967?mt=8" class="button" data-device="ios"><i class="sprite-ico-Button_iPhone2x"></i> <span>iPhone</span></a>
+<a href="/download/android" class="button" data-device="android-local"><i class="sprite-ico-Button_Android2x"></i> <span>Android</span></a>
+</div>
+<a href="/" target="_self" title="知乎日报"><i class="web-logo"></i></a>
+</div>
+</div>
+<div class="header-for-mobile">
+<a href="/download" class="header-for-mobile-download-link">
+<span class="header-for-mobile-btn">立即下载</span>
+<img class="header-for-mobile-logo-img" src="http://static.daily.zhihu.com/img/app-logo.png"/>
+<span class="header-for-mobile-title">知乎日报</span>
+<span class="header-for-mobile-meta">每日提供高质量新闻资讯</span>
+</a>
+</div>
+<div class="main-wrap content-wrap">
+<div class="headline">
+
+<div class="img-wrap">
+<h1 class="headline-title">VR 实现 120 帧刷新，索尼这回又搞出黑科技了吗？</h1>
+
+
+<span class="img-source">图片：Marco Verch / CC BY-SA</span>
+
+
+<img src="http://pic2.zhimg.com/d2a788b296f4b359252368a25fea64b9.jpg" alt="">
+<div class="img-mask"></div>
+</div>
+
+
+</div>
+
+<div class="content-inner">
+
+
+
+
+<div class="question">
+<h2 class="question-title">PS VR 是如何实现 120 Hz 的刷新率的？刷新频率高是一种显著优势吗？</h2>
+
+<div class="answer">
+
+<div class="meta">
+<img class="avatar" src="http://pic3.zhimg.com/107768dc32b2c2d160a51dba4d41e43e_is.jpg">
+<span class="author">令狐笑天，</span><span class="bio">www.VRerse.com 关于虚拟现实的一切</span>
+</div>
+
+<div class="content">
+<p>Sony 是通过 Asynchronous Reprojection 来辅助做到 120 帧的游戏显示，但并不能说是假的。</p>
+<p>首先要确认的是，PS VR 屏幕支持三种模式，1，原生 60fps 的渲染帧率, 再通过 Asynchronous Reprojection 转换成 120；2，原生 120Hz；3，原生 90Hz。这是后来的新固件支持的新模式。</p>
+<p>是的，有原生的真 120Hz 的显示刷新率，只要你对应用优化够好，或者应用本身就对机能要求不高。至于 90Hz，自然是折中的一种方案，开发者如果发现自己的应用超过 60fps 轻松，达到 120 又困难，那可以选择这个来作为优化目标。</p>
+<p>而把 60 通过重投射的方式翻倍的做法比较扎眼，导致大家忽略了 2 和 3。</p>
+<p>显然，这种方式并不是灵丹妙药，肯定有局限性，不然索尼也不会推出原生 90 和 120 的模式。</p>
+<p>首先要指出的是，无论是基于这个技术的硬件 OLED，还是异步重投影技术，都是 Oculus 给 Sony 的建议。基本上 Reprojection = Timewarp</p>
+<p>在索尼 2014 年 GDC 上首次公布 Project Morpheus 的时候，屏幕用的还是普通的 LCD 屏幕，至于宣布 120 Hz 全 RGB 像素排列的 1080p OLED 屏，已经是 2015 年的 GDC 了。</p>
+<p>用上 OLED 自然为的是低余晖，而 120Hz 也是为了降低低余晖可能带来的闪烁问题。关于低余晖，就是利用 OLED 自发光可以快速开关像素的特性来让每一帧只显示一两毫秒的方式，以此来降低拖影，和早期的 CRT 类似。背光发光的 LCD 像素开关没法那么快，所以以前宁愿用大笨显示器的电子竞技职业选手可不是矫情，别人真的是觉得液晶屏模糊。</p>
+<p>不过由于每一帧持续时间，如果按 60Hz 刷新率的显示屏来算的话，只有 16.7 毫秒，意味着十多毫秒都是黑的，所以会让一部分敏感人群察觉到闪烁。基于这个原因，索尼决定直接通过重投影把帧率翻倍。</p>
+<p>重投影的具体方式是这样的：渲染一帧画面的开销是很大的，有可能十多毫秒。对于延迟要求极高的 VR 来说，你得到目前头显位置再渲染再传回屏幕的 MTP 延迟，一旦错过当前帧的 vsync，延迟就直接到下一个帧之后了。</p>
+<p>而 Timewarp/Reprojection 就是想办法去充分利用两帧之间画面接近的特性，用尽量小的开销来生成对应当前人眼位置的方式。由于传感器是 1000hz 的，意味着每一毫秒都会有新的位置数据。于是<strong>你可以在刷新下一帧画面之前，利用最新的位置数据扭曲最近的一帧画面来对应你的头部数据</strong>。</p>
+<p>而异步，则是把这个线程和图像渲染线程分离开来。如果在一起顺序进行的话，由于 vsync 的时刻是固定的，一旦当前一帧画面没有渲染完成，Timewarp 也被延后了，失去了它的意义。解决的方式是在每一帧 vsync 之前以一定的空余时间量强制进行 Timewarp，那么就会涉及到 context switch，如果是 Nvidia 显卡的话由于用到 preemption 会有固定的毫秒级的开销，而且细密度只能在 drawcall 边界，如果开发者一个 drawcall 太长也会 miss 掉一个 vsync。按 Oculus 的说法，即使是三角形级别的细腻度都是不够的。但是由于索尼在策划 PS4 时期就引入了 ACE 异步计算引擎，因此不会有这些问题。异步重投影就是一帧是真实的，下一帧就是根据上一帧通过上面<strong>黑字</strong>的方式人工生成的（有很多人说插帧或者中间帧，指的是通过前一帧和后一帧的平均值得到的，意味着你得先得到后一帧数据才行，因此只能延迟至少两帧的显示时间才行得通，对于电视来说没影响但在 VR 里这种程度的延迟是不能接受的）。Oculus 和索尼的不同在于，索尼是每隔一帧固定用一次，用这个来进行帧率翻倍，生成伪画面；而 Oculus 则是每一帧都会扭一下来保证当前帧率不掉到 90 以下。Valve 这边目前没有用这种方式，不过在他们两年的 Advanced Rendering 演讲里多次提到相关研究以及一些类似的解决方式。</p>
+<p>本质上来讲，这类似于在玩家摄像机位的图像渲染线程之外，还有一个以玩家摄像机机位为圆心的球的显示线程以 120Hz 的刷新率在运行；玩家如果头动得足够快，机器画面渲染不跟上，理论上是可以看到身后的空白 / 虚无。而如果你关闭了这种方式，效果就是一旦卡了，机能跟不上了，画面就会卡在玩家眼前而不随头部运动发生改变，这时候人的体验就和被一拳打脸上的感觉差不多。</p>
+<p>当然，这种方式本身会有一些缺陷，比如最简单的，一旦画面中有移动的物体，显然当前帧根据上一帧扭曲得到的画面这个物体还是在原来的位置，那么这个物体虽然相对你的大脑理解位置还是对的，但是在下一帧更新时会有突然跳一下的现象出现。</p>
+<p>另外，所有根据你的摄像机向量得到的效果，都会出现奇怪的问题，什么镜面高光和反射之类的，都是基于你的眼睛向量得到的，而在扭曲的时候并不会照顾到。</p>
+<p>最后就是，牵扯到位置改变（translation），而不仅仅是方向（orientation）改变的话，复杂度一下子上升很多。方向改变基本上就是把上一帧按新位置扭一下就好了，而方位改变则意味着本来被挡住的地方可能会露出来，而上一帧根本就没有被挡住的地方的数据。再加上透明、抗锯齿等等&hellip;&hellip;</p>
+<p>E3 上我体验蝙蝠侠的时候，当我拿起钢琴架上的照片相框来回翻看时，重投影的 artifacts 就出现了，手的部分开始跳动，类似你在迪厅里跳舞时那种频闪灯造成的效果一样。</p>
+<p>因此，这个补帧的方式是为了在性能跟不上和卡顿时，也能照顾人大脑对现实世界理解的一种显示方式。如果你优化够牛，还是可以直接 90，甚至 120。</p>
+</div>
+</div>
+
+
+<div class="view-more"><a target="_self" href="http://www.zhihu.com/question/48950589">查看知乎原文<span class="js-question-holder" data-aid="81157"></span></a></div>
+
+</div>
+
+
+
+<div class="question">
+<div class="answer">
+<div class="content">
+<p>客官，这篇文章有意思吗？</p>
+<p dir="ltr"><a href="https://daily.zhihu.com/download?utm_source=article_suffix&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">好玩！下载 App 接着看 (๑&bull;ㅂ&bull;) ✧</a></p>
+<p><a href="/story/8258369?utm_source=other_article&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">再逛逛吧 ˊ_&gt;ˋ</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="qr">
+<h2 class="heading">扫描二维码下载知乎日报</h2>
+<span class="subheading">支持 iOS 和 Android</span>
+<div class="qr-wrap">
+<img src="http://static.daily.zhihu.com/img/qr1.png" alt="二维码下载知乎日报" width="148" height="148">
+</div>
+</div>
+</div>
+
+<div class="bottom-wrap">
+<div class="bottom-recommend">
+<span class="bottom-recommend-title">阅读更多</span>
+<a class="recommend-link" href="http://daily.zhihu.com/story/8906679" data-story="8906679">
+
+<span style="background-image:url(http://pic4.zhimg.com/e8d8b94a0ea530c6c3eedf465fc8901b.jpg)" class="link-image"></span>
+
+得了一种叫口腔溃疡的绝症，医生给了几条建议
+</a>
+<a class="bottom-recommend-download-link" href="/download">
+下载 「知乎日报」 客户端查看更多
+</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="http://www.zhihu.com/">知乎网</a> &middot; &copy; 2016 知乎
+</div>
+<script src="http://static.daily.zhihu.com/js/jquery.1.9.1.js"></script>
+<script src="/js/share.js?v=49768"></script>
+
+</body>
+</html>

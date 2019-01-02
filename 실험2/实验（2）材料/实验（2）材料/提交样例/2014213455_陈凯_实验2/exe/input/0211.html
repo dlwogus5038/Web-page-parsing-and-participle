@@ -1,0 +1,196 @@
+<!doctype html>
+
+
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>写给产品 / 市场 / 运营的数据抓取黑科技教程</title>
+<meta name="apple-itunes-app" content="app-id=639087967, app-argument=zhihudaily://story/8645106">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/css/share.css?v=5956a">
+
+
+<script src="http://static.daily.zhihu.com/js/modernizr-2.6.2.min.js"></script>
+<link rel="canonical" href="http://daily.zhihu.com/story/8645106"/>
+<base target="_blank">
+<script type="text/javascript">
+if (localStorage && localStorage.getItem('hideDownloadBanner') !== 'true') {
+document.documentElement.className += ' show-download-banner';
+}
+</script>
+</head>
+<body>
+
+<div class="global-header">
+<div class="main-wrap">
+<div class="download">
+<a href="https://itunes.apple.com/cn/app/id639087967?mt=8" class="button" data-device="ios"><i class="sprite-ico-Button_iPhone2x"></i> <span>iPhone</span></a>
+<a href="/download/android" class="button" data-device="android-local"><i class="sprite-ico-Button_Android2x"></i> <span>Android</span></a>
+</div>
+<a href="/" target="_self" title="知乎日报"><i class="web-logo"></i></a>
+</div>
+</div>
+<div class="header-for-mobile">
+<a href="/download" class="header-for-mobile-download-link">
+<span class="header-for-mobile-btn">立即下载</span>
+<img class="header-for-mobile-logo-img" src="http://static.daily.zhihu.com/img/app-logo.png"/>
+<span class="header-for-mobile-title">知乎日报</span>
+<span class="header-for-mobile-meta">每日提供高质量新闻资讯</span>
+</a>
+</div>
+<div class="main-wrap content-wrap">
+<div class="headline">
+
+<div class="img-wrap">
+<h1 class="headline-title">写给产品 / 市场 / 运营的数据抓取黑科技教程</h1>
+
+
+<span class="img-source">图片：Sebastian Sikora / CC BY</span>
+
+
+<img src="http://pic2.zhimg.com/551fac8833ec0f9e0a142aa2031b9b09.jpg" alt="">
+<div class="img-mask"></div>
+</div>
+
+
+</div>
+
+<div class="content-inner">
+
+
+
+<div class="question">
+<h2 class="question-title">写给产品 / 市场 / 运营的黑科技教程：如何用数据抓取调研竞品、获取用户？</h2>
+<div class="answer">
+
+<div class="meta">
+<img class="avatar" src="http://pic4.zhimg.com/25008e890e22f183534f0c9a7dd4b017_is.jpg">
+<span class="author">范冰XDash，</span><span class="bio">《增长黑客》作者</span>
+</div>
+
+<div class="content">
+<p>互联网是一座资源未被充分结构化的数据仓库，利用技术手段批量从已知网页或其他数据源下载资源的方法，就是<strong>数据抓取</strong>。执行这项任务的程序被称为<strong>网络爬虫（Web crawler）</strong>，它的职责在于采集、处理和储存。</p>
+<p>早期的数据抓取是一种按照特定规则，自动批量获取互联网信息的程序或脚本，能够辅助搜索引擎建立对海量内容的索引。不过，如同光明同黑暗同时诞生，数据抓取技术的出现，也带来恶意爬虫的降生，无论是制造虚假注册用户数据、采集竞争对手情报、尝试破解用户口令还是自动下单刷量，都离不开爬虫。对此我们不多做探讨。</p>
+<p>总部位于加州的 Diffbot 公司成立于 2008 年，创始人兼首席执行官 Mike Tung 是斯坦福毕业的研究生。这家公司的业务模式就是通过人工智能技术，让机器识别网页，抓取关键内容，再对其进行结构化处理，继而输出软件乃至人眼可以直接识别的结果。Diffbot 的技术被广泛应用于知识图谱、商业智能等领域。Scikit-Learn 机器学习库、phantomjs 渲染引擎等在其中扮演关键角色。</p>
+<p><img class="content-image" src="https://pic2.zhimg.com/4d8145500dbf8df7f2411aba2a47ed7d_b.jpg" alt="" /></p>
+<p>我的一位好友在国内知名外企出任技术专家，业余兼职为各种项目提供数据抓取服务。他亲身参与实践的案例包括：</p>
+<ul>
+<li><strong>锁定早期用户：</strong>西安一家新开业的美术教育机构招生，他花了两天时间写爬虫，抓取了国内最大的美术生交流社区上的公开学生信息，包括姓名、专业、电话、地理位置，筛选后将西安周边地区的学生名单卖给了这家机构。</li>
+<li><strong>调研竞争对手：</strong>为一家垂直电商的后起之秀服务，把两个成熟竞品过往两年的订单量、交易量及交易人数抓取整理出来，估算了对方的流水，由此为团队扩增、制定指标和新一轮融资提供了直观参照。</li>
+<li><strong>立项市场调查：</strong>他的一位好友打算做面向年轻人的动漫项目，想从非一线城市做起，于是请他把某国内最大&ldquo;二次元&rdquo;驻扎视频网站的用户数据抓取了三天，最后得出结论：成都、南京、杭州等城市是适宜启动的绝佳地点。</li>
+<li><strong>年底业绩交差：</strong>某国企在焦躁的互联网转型中指定了高不可攀的业绩指标，分公司负责人请他编写爬虫模拟新用户到网站注册，成功冲抵差额，在年底考核中保住了位子。</li>
+</ul>
+<p><strong>一、如何编写爬虫脚本抓取数据？基本步骤策略如下：</strong></p>
+<ol>
+<li><strong>选定目标。</strong>首先确定被抓取方提供了哪些服务，比如网站、移动应用、开放平台等。如果所有服务是等价的，不存在某一服务缺失什么功能，就优先从移动应用开始抓取。因为应用一般是通过 API 来获取数据，透过 API 抓取的数据比较方便后期的结构化整理。</li>
+<li><strong>技术方案。</strong>实际抓取采用的技术手段视情况而定，如果需求简单且对方完全没有防护，可以用命令行脚本；稍微复杂一点可以使用 Python，requests、beautifulsoup、re 都是实用的第三方库。</li>
+<li><strong>性能优化。</strong>如果是单次抓取需求，并不需要持续稳定地一直跟踪抓取，则对性能优化的考虑较少，可以直接在本机或是虚拟主机上执行，通过多个不同进程来同时工作，以调度器来统一管理。复杂一些可以考虑用付费的第三方云服务。</li>
+<li><strong>资源结构。</strong>抓取网页，一般先研究页面上是否有统一的资源 ID 命名方式（分类、排行、导航、搜索通常能提供良好的组织结构和命名规则），然后递增、遍历或借助能批量处理特定结构的第三方库。</li>
+<li><strong>见招拆招。</strong>对于采取防抓取措施的对象，也有应对方法：如果对方要求注册，网页服务可以在 request 请求中把浏览器的 cookie 带上，移动应用抓包看看 Auth Key 然后在请求中带上；如果对方有 IP 限制，可以用代理池解决；如果有随机数时间校验，就用 random 命令生成一个对应长度的随机数来延时。</li>
+<li><strong>数据处理。</strong>脏数据要用正则表达式或者 beautifulsoup 这样的第三方包把想要的内容取出来，然后存放到数据库，或是以约定的分隔符来划分字段并保存到文本文件里。</li>
+<li><strong>数据分析。</strong>简单的分析可以用命令行里的 sort、uniq、awk、diff 等搞定，复杂需求借助第三方库 pandas 可以方便地完成各种维度的分析查询和统计工作。</li>
+</ol>
+<p><strong>二、数据抓取的基础指令和常用工具：</strong></p>
+<p>写个爬虫抓取网络资源并不是每次都要兴师动众。掌握基本的指令，你也可以在十分钟之内拿到想要的内容。</p>
+<p><strong>1、CURL</strong></p>
+<p>Curl 是命令行下的开源文件传输工具，如果你使用苹果电脑或者 Unix、Linux 发行版，系统会自带，Windows 用户也可以安装对应的移植版本。</p>
+<p>Curl 命令的基本使用方法是，在命令行下执行：</p>
+<blockquote>curl <a class=" external" href="https://link.zhihu.com/?target=https%3A//assets-cdn.github.com/favicon.ico" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://</span><span class="visible">assets-cdn.github.com/f</span><span class="invisible">avicon.ico</span><span class="ellipsis"></span></a></blockquote>
+<p>其中 <a class=" external" href="https://link.zhihu.com/?target=https%3A//assets-cdn.github.com/favicon.ico" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://</span><span class="visible">assets-cdn.github.com/f</span><span class="invisible">avicon.ico</span><span class="ellipsis"></span></a> 是想抓取到本地的资源文件 URL。另外你也可以在 curl 后面添加以下参数或语法，实现更多高级配置：</p>
+<ul>
+<li>-o：将抓取到的资源按照指定名称保存，实现数据初步整理</li>
+<li>-C：断点续传，适合抓取大块头文件或是网络环境不稳定时</li>
+<li>-u：配合输入用户名和密码，可获得加密资源的授权访问资格</li>
+<li>-x：指定代理主机和端口，配合代理池可以在抓取时&ldquo;打一枪换一个地方&rdquo;</li>
+<li>-d：在发起请求时传送参数，运用巧妙既可以简化脚本代码，也可以实现更多出彩特性</li>
+<li>中括号：在 URL 中使用形如&ldquo;[100-200]&rdquo;语法，可以顺次从 100、101、102&hellip;200 之间的等间距资源，比如按顺序保存的文件名。</li>
+</ul>
+<p>我在《增长黑客》&ldquo;获取用户&rdquo;章节中谈到如何抓取第三方唱歌应用里的用户头像，稍加整理后用于某移动交友产品内测期间的数据冷启动，使用的就是这个 curl 指令。我们仅花费 2 个小时就拿到了 10000 多张高质量的头像大图，人工消耗成本极低。</p>
+<p>Curl 命令的详尽使用教程，可以参阅《黑客与画家》译者阮一峰先生整理的这篇指南：<a class=" external" href="https://link.zhihu.com/?target=http%3A//www.ruanyifeng.com/blog/2011/09/curl.html" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://www.</span><span class="visible">ruanyifeng.com/blog/201</span><span class="invisible">1/09/curl.html</span><span class="ellipsis"></span></a>。</p>
+<p><strong>2、file_get_contents</strong></p>
+<p>PHP 下的 file_get_contents() 函数用于将整个文件读入一个字符串中，既适用于本地文件，也作用于网络资源。早年网络上流行的第三方开源 CMS（Content Management System，内容管理系统）就有不少以自动抓取作为卖点，核心就是围绕这个函数展开。</p>
+<p>我也经常建议我的客户，在不伤及被抓取对象利益的前提下，尽可能编写脚本完成每日的常规运营工作，比如本地新闻、天气预报、行业动态&mdash;&mdash;这项工作如果只是向外界传递&ldquo;我们还没有倒闭&rdquo;的信息，那就不要占用额外人力，毕竟网上可供抓取的更新来源太多。</p>
+<p>file_get_contents 可以配合的其他常用函数包括：</p>
+<ul>
+<li>explode()：根据指定分隔符（比如逗号、分好、顿号），将抓取到的网页源代码切割成数组。</li>
+<li>strpos()：可以在抓取到的网页源代码里查找特定的字符。例如在舆情采集分析过程中，如果发现被抓取页面出现了竞争对手的名称，则产生对应的提醒动作，平时相安无事。</li>
+<li>substr()：用于从一串字符中截取出特定位数的字符，能剔除掉不必要的数据，让抓取结果干净和便于处理。</li>
+<li>echo()：打印出抓取结果看看，最直观的方式。</li>
+</ul>
+<p>我成功将 file_get_contents() 函数用于多个商业项目中，包括为某世界五百强公司在国内的微信公众平台菜单里实现与美国官网同步更新。此外业余也开发过有意思的用途，例如曾抓取多玩网数据开发了微信里的炉石传说卡牌游戏查询器，以及在 Mac 平台的效率软件 Alfred 里自行开发股票查询、日语字典、资讯快递等插件。</p>
+<p>PHP 官方网站上提供了这个函数的使用文档：<a class=" external" href="https://link.zhihu.com/?target=http%3A//php.net/manual/zh/function.file-get-contents.php" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">php.net/manual/zh/funct</span><span class="invisible">ion.file-get-contents.php</span><span class="ellipsis"></span></a>。</p>
+<p><strong>3、Charles&mdash;&mdash;抓包利器</strong></p>
+<p>有时候我们无法直接从程序界面抓取到文字或图像资源（对方可能封锁了网页点击，或者想抓取对象来自移动应用）。这时候可以改换思路，不抓静态资源，而是抓包。你可以将&ldquo;抓包&rdquo;理解成数据在运载过程中即被截获，有点像&ldquo;劫镖&rdquo;。</p>
+<p>Charles 是基于 Java 的跨平台工具，可用于 Windows、Mac 和 Linux 平台，能够让开发者方便地查看联网设备（电脑、手机、平板电脑）在传输交互中产生的数据包。只要手机和电脑在同一无线网络内，就能够在电脑上查看手机端收发的数据，既包括最终可见的界面文字，也包括隐含传输的文件头、指令、参数等。</p>
+<p><img class="content-image" src="https://pic4.zhimg.com/a6e51167bcdc6cb362e2042abb922873_b.png" alt="" /></p>
+<p>Charles 的官网是：<a class=" external" href="https://link.zhihu.com/?target=https%3A//www.charlesproxy.com/" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://www.</span><span class="visible">charlesproxy.com/</span><span class="invisible"></span></a>。</p>
+<p><strong>三、如何规避抓取别家数据的潜在风险？</strong></p>
+<p>除了上述披露细节，在我的《增长黑客》里也提到一些数据抓取解决冷启动的实战案例。其实在互联网行业里，依靠抓取来获取数据的做法，并不罕见。既然我敢于公诸于众，就不可避免遭遇质疑和非议。</p>
+<p>在此请允许我就&ldquo;如何规避抓取别家数据的潜在风险？&rdquo;的问题阐述我的经验和反思：</p>
+<p>第一，技术是中立的，本身不带有任何倾向性。</p>
+<p>如何你觉得从别的平台&ldquo;右键另存为&rdquo;来获得资源并运用到自己的产品里不构成任何问题，那么写脚本批量抓取没有改变这件事的性质，它只是帮你将原本需要人工操作三天的事情简化到三个小时内自动完成。</p>
+<p>第二，平台各有自己的政策，不同平台的抓取策略不同。</p>
+<p>有的平台明确在自己的用户协议里声明，&ldquo;本平台只承担数据存储的作用，内容版权隶属原作者所有&rdquo;，这时候，你完全可以征得原作者同意之后，以你认为方便的途径去获取。至于如何快速大量获得原作者同意？也可以通过写脚本批量发私信给目标人群。这种行为的性质参见第一条。</p>
+<p>第三，分清学习目的与商用目的。</p>
+<p>我专门查询过版权法等相关法律法规，其中对&ldquo;出于学习目的&rdquo;是有专门的分类讨论的。如果将抓取来的数据用于产品上线前内部的测试、参考，以此作为私下决策依据而非投入实际商业运作， 我认为是属于这一范畴的（当然还是得具体问题具体分析）。当然，你最好还是先征询你律师的建议。</p>
+<p>最后，你有没有越界，其实你自己心里清楚。</p>
+<p><strong>四、如何反抓取，保护自己的数据资产？</strong></p>
+<p>既然有抓取，自然也有反抓取。通常反抓取的目的在于：</p>
+<p>第一，保护企业的数据资产。虽然通常能被抓取的是公开内容，但这些可免费查询的资源很可能原本就是一种商业竞争策略，如果被对手抓取，竞争力此消彼长，很可能让让企业蒙受损失，这是需要防范的。</p>
+<p>第二，节省带宽，提升服务性能。初级程序员编写的脚本如果性能堪忧，源源不断的访问会对被抓取网站的带宽和性能带来压力，抬升成本。有些抓取初衷虽无恶意，却叫人哭笑不得。我的一个朋友就曾抱怨，每年三月都会迎来一波被抓取的高峰期，原来是计算机专业应届毕业生此刻都在忙着毕业答辩，抓取数据赶论文。</p>
+<p>第三，去除数据噪音。数据抓取会影响对网站流量指标的误判，徒增的 IP/PV/UV 可能源自机器爬虫的访问，这对于运营人员拆分流量和追踪用户形成了干扰，与其在分析数据阶段清洗数据，不如在收集数据阶段就屏蔽干扰因素。</p>
+<p>常见的抓取策略包括：封锁 IP、封锁设备、限制单位时间内的访问频度、混淆代码增大识别难度等。将单一策略组合起来，能更有效地避免误判，以免将普通用户识别为爬虫。</p>
+
+<div class="view-more"><a target="_self" href="http://zhuanlan.zhihu.com/p/21844130">查看知乎原文</a></div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="question">
+<div class="answer">
+<div class="content">
+<p>客官，这篇文章有意思吗？</p>
+<p dir="ltr"><a href="https://daily.zhihu.com/download?utm_source=article_suffix&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">好玩！下载 App 接着看 (๑&bull;ㅂ&bull;) ✧</a></p>
+<p><a href="/story/8258369?utm_source=other_article&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">再逛逛吧 ˊ_&gt;ˋ</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="qr">
+<h2 class="heading">扫描二维码下载知乎日报</h2>
+<span class="subheading">支持 iOS 和 Android</span>
+<div class="qr-wrap">
+<img src="http://static.daily.zhihu.com/img/qr1.png" alt="二维码下载知乎日报" width="148" height="148">
+</div>
+</div>
+</div>
+
+<div class="bottom-wrap">
+<div class="bottom-recommend">
+<span class="bottom-recommend-title">阅读更多</span>
+<a class="recommend-link" href="http://daily.zhihu.com/story/8913343" data-story="8913343">
+
+<span style="background-image:url(http://pic1.zhimg.com/94811b34d96e1aeb69117d7465ebc8fc.jpg)" class="link-image"></span>
+
+怎样增加深度睡眠时间？
+</a>
+<a class="bottom-recommend-download-link" href="/download">
+下载 「知乎日报」 客户端查看更多
+</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="http://www.zhihu.com/">知乎网</a> &middot; &copy; 2016 知乎
+</div>
+<script src="http://static.daily.zhihu.com/js/jquery.1.9.1.js"></script>
+<script src="/js/share.js?v=49768"></script>
+
+</body>
+</html>

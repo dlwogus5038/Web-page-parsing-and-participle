@@ -1,0 +1,168 @@
+<!doctype html>
+
+
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>从开关接电，即使灯关了有时候还会闪，为什么？</title>
+<meta name="apple-itunes-app" content="app-id=639087967, app-argument=zhihudaily://story/8653016">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/css/share.css?v=5956a">
+
+
+<script src="http://static.daily.zhihu.com/js/modernizr-2.6.2.min.js"></script>
+<link rel="canonical" href="http://daily.zhihu.com/story/8653016"/>
+<base target="_blank">
+<script type="text/javascript">
+if (localStorage && localStorage.getItem('hideDownloadBanner') !== 'true') {
+document.documentElement.className += ' show-download-banner';
+}
+</script>
+</head>
+<body>
+
+<div class="global-header">
+<div class="main-wrap">
+<div class="download">
+<a href="https://itunes.apple.com/cn/app/id639087967?mt=8" class="button" data-device="ios"><i class="sprite-ico-Button_iPhone2x"></i> <span>iPhone</span></a>
+<a href="/download/android" class="button" data-device="android-local"><i class="sprite-ico-Button_Android2x"></i> <span>Android</span></a>
+</div>
+<a href="/" target="_self" title="知乎日报"><i class="web-logo"></i></a>
+</div>
+</div>
+<div class="header-for-mobile">
+<a href="/download" class="header-for-mobile-download-link">
+<span class="header-for-mobile-btn">立即下载</span>
+<img class="header-for-mobile-logo-img" src="http://static.daily.zhihu.com/img/app-logo.png"/>
+<span class="header-for-mobile-title">知乎日报</span>
+<span class="header-for-mobile-meta">每日提供高质量新闻资讯</span>
+</a>
+</div>
+<div class="main-wrap content-wrap">
+<div class="headline">
+
+<div class="img-wrap">
+<h1 class="headline-title">从开关接电，即使灯关了有时候还会闪，为什么？</h1>
+
+
+<span class="img-source">图片：mtsrs / CC BY</span>
+
+
+<img src="http://pic4.zhimg.com/18284823ff5bf131f82512be103e4813.jpg" alt="">
+<div class="img-mask"></div>
+</div>
+
+
+</div>
+
+<div class="content-inner">
+
+
+
+
+<div class="question">
+<h2 class="question-title"></h2>
+
+<div class="answer">
+
+<div class="meta">
+<img class="avatar" src="http://pic4.zhimg.com/d5bf4a2b4a20fbbfa8be2758bad01ca3_is.jpg">
+<span class="author">Patrick Zhang，</span><span class="bio">电气工程师</span>
+</div>
+
+<div class="content">
+<p>题主问题的要点：</p>
+<p><strong>1）从控制顶灯的开关中引电到新装插座中，接好后即便在关灯的状态下灯也会闪烁，开灯的时候正常，把插座拆掉就没事，请问这是什么原因？</strong></p>
+<p><strong>2）如果想要从开关里接电出来应该怎么做？</strong></p>
+<p>其实题主私信给我时，还有一句话：他把开关中的发光二极管灯拆除后，节能灯就不闪了。这句话很重要，它是我们揭开谜底的钥匙。</p>
+<p>可以料想这里的顶灯就是节能灯。几天前回答和解释了一个帖子，也是关于节能灯在开关断开情况下闪烁问题，而且有知友说居然解决了他们心中埋藏了十几年的灵异问题，真是始料不及。</p>
+<p>在这里，题主的问题类似。为了让知友们相对详细地明白其中的道理，我给大家做一番释疑。</p>
+<p><strong>我们先来回答第一个问题。</strong></p>
+<p>我们来看图 1：</p>
+<p><img class="content-image" src="http://pic2.zhimg.com/70/3d7098be98db504085c58469d8298a25_b.jpg" alt="" /></p>
+<p><strong>图 1：节能灯的控制及其工作原理</strong></p>
+<p>先看左上部的电路图：我们看到图中有相线 L 和中性线 N，有翘板开关 K，也即普通的 86 开关，还有节能灯 HL。注意到开关内部有一个发光二极管，并且串接了一只 120 千欧的电阻。</p>
+<p>当开关 K 打开时，发光二极管会有微弱的电流流过，因此它会发光；当 K 闭合时，发光二极管连同限流电阻被短接，因此发光二极管不发光。</p>
+<p>HL 节能灯内部的电路见右上图。图中从左往右分别是：整流电路、高频振荡电路、高频变压器和灯管。整流电路用于将交流电压整流为直流电压，振荡电路用于产生振荡电流，高频变压器用于将振荡电流变换为击穿灯管所需的电压。灯管击穿后，振荡电流、高频变压器及整流电源部分共同为灯管提供了较大的辉光放电工作电流。</p>
+<p>我们看右下图：图中的曲线是灯管内气体的伏安特性。我们看到，当电流很小时，气体承受的电压也很小，远低于击穿电压，因此气体不会被击穿。</p>
+<p>我们开始增加电流，当气体承受的电压到达击穿电压 Uc 时，气体被击穿，对应的电流是 Ic。从节能灯的外观看，它开始闪亮。</p>
+<p>我们继续加大电流，这时气体进入到辉光放电区。辉光放电区的特点是：放电区域充满整个灯管，并且放出均匀的光芒，这就是节能灯灯管的正常工作状态。<strong>需要注意到的是：辉光放电区的电流大于击穿电流 Ic，并且要有连续的充足的电能供应。</strong></p>
+<p>当开关 K 闭合时，灯管是能够进入到辉光放电区的。但是当 K 打开时，又会怎样呢？</p>
+<p>我们看到，开关 K 上的发光二极管，连同它的限流电阻，其实都是串联在节能灯的整流回路中。因此，节能灯的整流回路是可以输出电流的，只是这个值相对较小而已。</p>
+<p><strong>注意到整流电路中有一只滤波电容 C1，它的用途是把整流后的脉动直流电压滤波成平滑的直流电压。在开关 K 打开时，滤波电容成了储能元件，它将流经发光二极管和整流管的直流电压储存起来，直到可以让后接的高频振荡电路工作。然而电容 C1 上储存的容量有限，只能一次性的提供电能让振荡器振荡并击穿灯管，但是不能维持灯管持续的辉光放电。电容 C1 上的电压消耗殆尽后，就再次开始储能，以及再次提供重复击穿灯管的能量。这种状态周而复始，我们就看到了节能灯的闪烁发光。</strong></p>
+<p><strong>由此我们得知：正是由于开关 K 中安装了发光二极管，才产生这种结果。</strong></p>
+<p>图 2 是节能都中控制电路的安装位置。</p>
+<p><img class="content-image" src="http://pic3.zhimg.com/70/c7fde831810de5f52254d8d1e04354d6_b.jpg" alt="" /></p>
+<p><strong>图 2：节能灯控制电路的安装位置</strong></p>
+<p>现在我们已经明白节能灯闪烁的原因了。</p>
+<p>如果我们也象题主那样，把开关 K 中的发光二极管拆除，是否就可以了呢？</p>
+<p>如果按图 1 所示，的确是可以得。</p>
+<p>但问题又来了：如果我们把 L 线和 N 线对调（相线和零线对调），从图 1 中我们可以看到，这时节能灯即使在开关 K 打开的状态下，它也是带电的。如此一来，若线路中有漏电，或者在 K 的上端又引出了外引导线及其它用电电器，则线路的电容效应就会让整流回路工作。</p>
+<p>值得注意的是：在外引线路较长的情况下，其分布电容引起的电流会比发光二极管及其限流电阻的电流更大，节能灯闪烁的情况会更加严重。</p>
+<p><strong>现在，我们来回答第二个问题。</strong></p>
+<p>这第二个问题的解答很简单，就几条：</p>
+<p>第一条：采用工作电流稍大一些的灯具，例如 LED 灯；</p>
+<p>第二条：记住：火线接开关，零线接灯头。这是电工的口诀。</p>
+<p>对于一般的居家配电，要相线接开关，N 线接灯头。</p>
+<p>第三条：不要从开关的出线侧引出过长的导线。如果一定要引出，则从开关的进线侧引，另外加开关来控制。</p>
+<p>原则是：避免出现导线的分布电容效应。</p>
+<p>第四条：居家配电的相线和 N 线不要对调，或者火线和零线不要对调。</p>
+<p>第五条：要做好接地，并且确保接地有效。</p>
+<p>注意：接地点不在室内，在室外电度表箱附近，标记为 MEB 的接地扁钢就是。入户时，应当有三条线：相线 L，中性线 N 和地线 PE。</p>
+<p>做到以上这几条后，相信问题就能解决。</p>
+<p>不过，事物都是千变万化的，也许还存在其它特殊情况，欢迎知友们在评论区指出。我会酌情修改解答。</p>
+</div>
+</div>
+
+
+<div class="view-more"><a target="_self" href="http://www.zhihu.com/question/48189586">查看知乎原文<span class="js-question-holder" data-aid="81556"></span></a></div>
+
+</div>
+
+
+
+<div class="question">
+<div class="answer">
+<div class="content">
+<p>客官，这篇文章有意思吗？</p>
+<p dir="ltr"><a href="https://daily.zhihu.com/download?utm_source=article_suffix&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">好玩！下载 App 接着看 (๑&bull;ㅂ&bull;) ✧</a></p>
+<p><a href="/story/8258369?utm_source=other_article&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">再逛逛吧 ˊ_&gt;ˋ</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="qr">
+<h2 class="heading">扫描二维码下载知乎日报</h2>
+<span class="subheading">支持 iOS 和 Android</span>
+<div class="qr-wrap">
+<img src="http://static.daily.zhihu.com/img/qr1.png" alt="二维码下载知乎日报" width="148" height="148">
+</div>
+</div>
+</div>
+
+<div class="bottom-wrap">
+<div class="bottom-recommend">
+<span class="bottom-recommend-title">阅读更多</span>
+<a class="recommend-link" href="http://daily.zhihu.com/story/8913343" data-story="8913343">
+
+<span style="background-image:url(http://pic1.zhimg.com/94811b34d96e1aeb69117d7465ebc8fc.jpg)" class="link-image"></span>
+
+怎样增加深度睡眠时间？
+</a>
+<a class="bottom-recommend-download-link" href="/download">
+下载 「知乎日报」 客户端查看更多
+</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="http://www.zhihu.com/">知乎网</a> &middot; &copy; 2016 知乎
+</div>
+<script src="http://static.daily.zhihu.com/js/jquery.1.9.1.js"></script>
+<script src="/js/share.js?v=49768"></script>
+
+</body>
+</html>

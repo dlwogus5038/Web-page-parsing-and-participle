@@ -1,0 +1,194 @@
+<!doctype html>
+
+
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>「这年头还有安全的 USB 设备吗？」</title>
+<meta name="apple-itunes-app" content="app-id=639087967, app-argument=zhihudaily://story/8692929">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/css/share.css?v=5956a">
+
+
+<script src="http://static.daily.zhihu.com/js/modernizr-2.6.2.min.js"></script>
+<link rel="canonical" href="http://daily.zhihu.com/story/8692929"/>
+<base target="_blank">
+<script type="text/javascript">
+if (localStorage && localStorage.getItem('hideDownloadBanner') !== 'true') {
+document.documentElement.className += ' show-download-banner';
+}
+</script>
+</head>
+<body>
+
+<div class="global-header">
+<div class="main-wrap">
+<div class="download">
+<a href="https://itunes.apple.com/cn/app/id639087967?mt=8" class="button" data-device="ios"><i class="sprite-ico-Button_iPhone2x"></i> <span>iPhone</span></a>
+<a href="/download/android" class="button" data-device="android-local"><i class="sprite-ico-Button_Android2x"></i> <span>Android</span></a>
+</div>
+<a href="/" target="_self" title="知乎日报"><i class="web-logo"></i></a>
+</div>
+</div>
+<div class="header-for-mobile">
+<a href="/download" class="header-for-mobile-download-link">
+<span class="header-for-mobile-btn">立即下载</span>
+<img class="header-for-mobile-logo-img" src="http://static.daily.zhihu.com/img/app-logo.png"/>
+<span class="header-for-mobile-title">知乎日报</span>
+<span class="header-for-mobile-meta">每日提供高质量新闻资讯</span>
+</a>
+</div>
+<div class="main-wrap content-wrap">
+<div class="headline">
+
+<div class="img-wrap">
+<h1 class="headline-title">「这年头还有安全的 USB 设备吗？」</h1>
+
+
+<span class="img-source">图片：Emil . / CC BY-SA</span>
+
+
+<img src="http://pic2.zhimg.com/b1bf3422b15f3731a8ba3ab486c0a70d.jpg" alt="">
+<div class="img-mask"></div>
+</div>
+
+
+</div>
+
+<div class="content-inner">
+
+
+
+<div class="question">
+<h2 class="question-title"></h2>
+<div class="answer">
+
+<div class="meta">
+<img class="avatar" src="http://pic1.zhimg.com/da8e974dc_is.jpg">
+<span class="author">欧阳洋葱</span>
+</div>
+
+<div class="content">
+<p>* FreeBuf 专题报道，未经许可禁止转载</p>
+<blockquote>在正式开谈 USB 安全之前，还是照例来分享一个很有意思的案例：2014 年年末，来自 Reddit 的报道，某大公司高管电脑感染了恶意程序。公司的安全研究人员就调查恶意程序来源，但检查了所有传统可能的感染途经都一无所获。于是他们开始考虑其他突破口，从这位高管的饮食起居入手，翻来覆去地查，最后发现问题居然出在高管的电子烟身上。<br /><br />&ldquo;这是一款中国造的电子烟，充电装置部分包含了硬件编码的恶意程序。&rdquo;而这款电子烟是通过 USB 口充电的，这名高管为了充电，顺手会将其插入到公司的电脑上，于是电脑就感染了恶意程序。</blockquote>
+<p>在这一例中，如果恶意程序做得更加隐秘，那么整个攻击过程甚至可以达到神不知鬼不觉。这其中的传播核心，就是我们要谈的&ldquo;USB 安全&rdquo;。</p>
+<p><img class="content-image" src="https://pic4.zhimg.com/cad209d6e08cb9996855b53d6c288447_b.jpg" alt="" /></p>
+<p><strong>USB 安全？这是什么意思？</strong></p>
+<p>我们擅自提&ldquo;USB 安全&rdquo;这个词汇，其实是不准确的。因为 USB 本质上只是一种通用串行总线&mdash;&mdash;总线有很多啊，SATA 总线、PCIe 总线等等，这有什么样的安全话题可谈呢？可能 USB 充其量可作为恶意程序传播的途经。我们说&ldquo;USB 安全&rdquo;，和说&ldquo;网线安全&rdquo;是不是感觉差不多荒谬？</p>
+<p>不过大概是因为 USB 作为替代古代各种接口的明星级统一标准，而且 USB 又不像 Thunderbolt 之类的接口一样需要高昂的授权费用，当代世界的海量设备采用 USB 接口也是种必然。有趣的是，我们经常将采用 USB 接口的设备称作 USB 设备（却没有人将 PC 内置的硬盘称作 SATA 设备或者 PCIe 设备），这也是我们这里谈 USB 安全的基础。</p>
+<p><img class="content-image" src="https://pic4.zhimg.com/b32ca8999d8b1577fbf912347d2991bb_b.jpg" alt="" /></p>
+<p>由于 USB 当代的使用如此广泛，所以 USB 设备也就成为了恶意程序传播的重要载体。但如果只说 USB 设备作为恶意程序的传播途径，那么任何接口实际上也都存在这种传播的可行性。比如说 U 盘能够传播病毒，Thunderbolt 移动硬盘也行，连光盘都可以。</p>
+<p>总的说来，我们要谈所谓的 USB 安全，并不是 USB 在数据传输过程中存在安全问题，或者某类 USB 接口规格（如 Type-C）某个针脚存在设计缺陷，而是 USB 接口或总线作为恶意程序的一个重要途经，存在安全问题，以及 USB 协议、驱动存在的安全问题。</p>
+<p>因此针对 USB 安全，有 3 点可谈。其一，USB 是个具有相当普遍性的标准，鼠标、键盘、电子烟、外置声卡都用 USB 接口，且即插即用。所以在物理接口中，它对恶意程序的传播大概是除了网络适配器接口之外，效率最高的。其二，USB 协议可被攻击者利用，这也将是本文要谈到的重点。其三，最高级的 USB 0day 漏洞攻击。</p>
+<p><img class="content-image" src="https://pic1.zhimg.com/43bb61fb0b7ead963b0c949225c6a5fc_b.jpg" alt="" /></p>
+<p><strong>autorun.inf 时代！U 盘病毒？</strong></p>
+<p>在网络还不像现在这么盛行的年代，可移动存储设备是传播病毒的重要方式。就是将恶意程序放在 U 盘，或者移动硬盘，甚至软盘中&mdash;&mdash;在不同的 PC 交换数据的过程中，就可以达到传播病毒的作用。再高明的恶意程序也需要人类去打开才能运行，巧在像 Windows 这类操作系统，为了加强使用体验，系统中有个针对移动存储介质的 AutoPlay/AutoRun 自动播放功能。</p>
+<p>原本自动播放的功能是，针对 CD/DVD 多媒体光盘可实现插入即播放，而针对 Windows 安装介质，插入就能立即弹出安装程序。绝大部分同学应该都知道移动存储介质的根目录下的 autorun.inf 文件就负责自动播放功能，打开形如以下样式：</p>
+<div class="highlight">
+<pre><code class="language-text">[autorun] open=setup.exe icon=setup.exe,0label=My install CD
+</code></pre>
+</div>
+<p>相较光盘，U 盘的可读写方便性明显更胜一筹，如果这里的 setup.exe 是个病毒，那么设备插入 U 盘，系统就会自动运行该病毒。所以病毒通过 autorun.inf 文件实现 U 盘插入即启动恶意程序的功能，实在是太方便了。同事间交换数据，大家的电脑都插一遍带毒 U 盘，自然就都感染上了。已经被感染的设备，再感染插入设备的新 U 盘，以此达到扩散的目的。</p>
+<p><img class="content-image" src="https://pic3.zhimg.com/3ecf6ad45336a24684c9651311ad0b4e_b.jpg" alt="" /></p>
+<p>这是 U 盘传播恶意程序的常规手法，也因此有些人将 autorun.inf 称作&ldquo;U 盘病毒&rdquo;，虽然这东西其实是很无辜的。实际上，要杜绝这种方式的病毒传播也并不困难，一方面是在系统中禁用移动存储介质的自动播放或自动启动功能，另一方面也可以禁止程序在 U 盘中创建 autorun.inf 文件，达到 U 盘不会传播病毒的目的。</p>
+<p>可以说，autorun.inf 是过去在民间最广为流传的 U 盘病毒传播方式。很多 U 盘病毒查杀工具都主要针对 autorun.inf 进行围剿。尤其从 Windows XP SP2 开始，系统针对&ldquo;USB 大容量存储设备&rdquo;和 ZIP 驱动器，自动播放功能是默认开启的。微软眼见形势不妙，从 Windows Vista 和 Windows Server 2008 开始，针对插入 U 盘的的系统默认行为，已改为询问用户是否执行自动运行指令。现如今 autorun.inf 的时代几乎已经过去。</p>
+<p><strong>用 U 盘来钓鱼会不会成功？</strong></p>
+<p>如前文所述，其实上面谈到的 U 盘安全问题并不是 USB 设备的专属，任何移动存储设备（甚至连内置硬盘）都存在这样的问题。所以严格意义上，这种安全问题根本就怪不到 USB 头上，如果一定要怪，就如前文所述，只是因为 USB 实在是太普遍了。</p>
+<p><img class="content-image" src="https://pic1.zhimg.com/958dbf4ea957d6b2db1b62f54fe9d2f0_b.jpg" alt="" /></p>
+<p>前不久刚刚结束的 Black Hat USA 2016 黑客大会上，谷歌反欺诈研究团队负责人 Elie Bursztein 分享了一个议题，名为&ldquo;Does dropping USB drives really work？&rdquo;（丢 U 盘进行社工攻击真的有效吗？）他尝试在伊利诺伊大学校园里各处丢弃 297 个 U 盘，看看有没有好奇心重的人会捡回去看 U 盘里究竟有什么。如果说 Bursztein 丢的是 297 块 SATA3 硬盘（Lol），攻击方式理论上是一样的，但攻击效果有多么糟糕是可想而知的。可见 USB 的普及性，是我们在此讨论其安全性的依据。</p>
+<p>美国计算机行业协会去年曾经发起过一项调查，结果显示 17% 的人在捡到 USB 设备后会直接连电脑&mdash;&mdash;这个数据可能还过于保守。Bursztein 的调查结果明显更激进：135 个 U 盘（也就是 45%）被人捡走后都连接了电脑，这些人还打开了其中的文件，其上的&ldquo;恶意程序&rdquo;给 Bursztein 回传了数据。</p>
+<p>好在这还只是个实验，并不存在真的&ldquo;恶意&rdquo;。Bursztein 的研究团队是这么做的：他们没有用 autorun.inf，因为现在的操作系统根本就不吃这套，Mac 连自动运行功能都不支持，他们的方法是：钓鱼。</p>
+<p><img class="content-image" src="https://pic2.zhimg.com/0e2920efde251c1ca9e6d9a2996150c5_b.jpg" alt="" /></p>
+<p>研究团队给这 297 个 U 盘分别贴了些标签，甚至还明确写上了 U 盘所有者（以及归还地址），即便在这种情况下还是有 135 个 U 盘被好奇心重的同学打开了。U 盘里面的文件迷惑性地写上了&ldquo;期末考试&rdquo;&ldquo;机密&rdquo;等字样，实际上这些文件都是 HTML 格式的，文件中有张图片，调用了研究团队服务器的地址&mdash;&mdash;这样一来研究团队就知道，有人打开了文件。</p>
+<p>除此之外，HTML 文件打开后有个问卷调查，询问这些好奇心宝宝：你们为啥要插人家的 U 盘呀！的确也有 20% 的人参与了调查，超 2/3 的人表示他们其实是想归还 U 盘的（Really？），18% 的人承认他们是好奇，14% 的人给出了其他解释。</p>
+<p>就这一个例子，我们就不难看出 U 盘钓鱼的成功率还是相当高的。如果这些 HTML 文件都换成恶意程序，或者调查问卷改成询问用户名密码的&ldquo;钓鱼问卷&rdquo;，又有多少人会栽在其中呢！美剧《黑客军团（Mr Robot）》中就出现了用 U 盘钓鱼的桥段，看样子这根本就不只是个传说！</p>
+<p><img class="content-image" src="https://pic1.zhimg.com/4ea7f6fad3efe4ba32691b8932be1f34_b.jpg" alt="" /></p>
+<p><strong>U 盘攻击绝杀：伪装成 HID 设备</strong></p>
+<p>还是那句话，上面两部分谈的实际上都仍是将 USB 设备作为传播恶意程序的载体，就好像 U 盘钓鱼，其本质和丢个软盘来钓鱼（Lol），以及邮件钓鱼是没差别的，原罪不在 USB 设备身上。如果用这种方法来谈 USB 安全，实际上还有很多内容可说，比如说 USB 接口是入侵 ATM 机的重要途径，还有 USB Key 这类作为数据解密的安全手段，都不过是将 USB 作为工具。</p>
+<p>那么有没有 USB 本身的原罪可谈呢？有！可以从 USB 的协议入手。USB 不止 MSC（大容量存储）设备这一种，现在的 USB 接口支持这么多功能，协议其实也五花八门，自然不光有相关 MSC 的协议，什么 USB Power Delivery（USB 快速充电规范）、USB OTG（SRP、HNP 协议，两个外设间传输）等等，还有一个 USB HID 设备类协议。这里的 USB HID，近两年来已经成为 USB 设备攻击的绝杀了。</p>
+<p>HID 也就是 Human Interface Device，是与人交互的设备。其实 USB-HID 设备现如今已经相当普遍了，比如 USB 键盘、鼠标、手柄等等。这要怎么利用呢？在 2014 年的 Black Hat 黑客大会上，安全研究人员 Karsten Nohl 和 Jakob Lell 发表了演讲，提到一个有些惊世骇俗意味的 USB 攻击手段，名叫 BadUSB，部分利用了 HID 的特点。</p>
+<p><img class="content-image" src="https://pic4.zhimg.com/da70900045ffd2a20371d2702a7104f7_b.jpg" alt="" /></p>
+<p>上面说的好玄乎，所以下面再来举个栗子：键盘都用过吧？有没有试过不用鼠标，纯粹用键盘来进行各项系统操作呢？有经验的同学应该知道，其实也不难。那么如果有这么一个 U 盘，它能够伪装成键盘，通过脚本执行一系列键盘敲击操作，是不是感觉就能控制你的系统了？这其实就是 BadUSB 攻击利用 USB 协议的示例。被 BadUSB 感染过的 U 盘不仅能够伪装成 USB 键盘，还能伪装成 USB 网卡&mdash;&mdash;篡改 DNS，这样一来所有的 DNS 查询就能发往攻击者的服务器，可进行重定向攻击。</p>
+<p>一旦这种攻击得以实现，那么攻击方式自然也就变得五花八门了，只有想不到没有做不到，最重要的是跨平台&mdash;&mdash;因为各系统平台遵循一致的 USB 标准。详情可参见我们当年发布的一篇文章《<a class=" wrap external" href="https://link.zhihu.com/?target=http%3A//www.freebuf.com/articles/terminal/42616.html" target="_blank" rel="nofollow noreferrer">解密 BadUSB：世界上最邪恶的 USB 外设</a>》。</p>
+<p><img class="content-image" src="https://pic3.zhimg.com/b71da09bd4657559049869ecb2dc652a_b.png" alt="" /></p>
+<p>说到底，这种 HID 模拟攻击不就是当年黑客们很爱的 USB 橡皮鸭（USB Rubber Ducky）吗？问题是橡皮鸭的内部硬件很彪悍，有个 60MHz 主频的处理器、microSD 扩展插槽。普通 U 盘何以实现这样的攻击手段？这个问题其实才是 Karsten Nohl 和 Jakob Lell 这两位研究人员的高明之处，也是这些 U 盘在感染 BadUSB 之后的可怕之处。</p>
+<p>一般 U 盘的构成除了我们需要用到的存储数据的闪存部分，还有主控芯片，或者叫控制芯片。主控芯片一般会指定某些部分的单元用于存储固件驱动（似也有主控芯片本身就包含了固件闪存）。这里的固件就类似于操作系统，控制软硬件交互。Nohl 和 Lell 花了好几个月的时间进行逆向工程，他们发现许多 U 盘都可以对固件部分进行重新编程（尤其是 PHISON 群联的主控芯片）。用户根本就看不到固件部分，要隐藏攻击代码自然就非常容易了。</p>
+<p><img class="content-image" src="https://pic2.zhimg.com/4c77fb1b081fb652859682ec81c34f69_b.jpg" alt="" /></p>
+<p>这就是 BadUSB 得以成型的核心所在。另一方面当代操作系统为了给 USB 设备提供最大的兼容性，USB 标准是允许一个 USB 设备具有多种输入输出设备的特征的。这样一来，通过重写 U 盘固件，就能让它伪装成 USB 键盘、网卡甚至显示器。通过这个假的键盘，输入 U 盘固件中的恶意指令和代码，还可以配合闪存中的恶意程序进行攻击。</p>
+<p>说白了，BadUSB 是令普通 U 盘都变身为橡皮鸭，甚至攻击性更强。这其中的加强体现在 BadUSB 的伪装和传播性方面。伪装！很容易理解，看起来只是个普通 U 盘，而且即便格式化 U 盘也无法清除恶意代码，因为恶意代码在固件中；传播！当年 Nohl 和 Lell 在研究报告中有特别提到，BadUSB 理论上最大的威胁在于，通过一个 BadUSB 设备给计算机感染恶意程序之后，计算机也可以将 BadUSB 传播到其他插入计算机的 U 盘：某个 U 盘在插入这台计算机之后，计算机上的恶意程序就能够对 U 盘固件进行重新编写，U 盘主人根本就不会察觉到。</p>
+<p>这么一来，全世界的 U 盘都能通过这种方式被 BadUSB 感染，全世界没有任何一个 U 盘是可被信任的，因为根本就没有反病毒软件能够查到。由此甚至可以引发一个问题：USB 设备是否已经到了根本就没有安全性可言的地步？</p>
+<p><img class="content-image" src="https://pic3.zhimg.com/b0a00a8ba517bd2b5b764c03964917ee_b.jpg" alt="" /></p>
+<p>其实也不尽然，针对 U 盘固件，引入不可伪造加密签名机制就是种方案，杜绝恶意程序的重新编写。这就主要取决于闪存主控芯片制造商了。因为有人指责 Nohl 说，他先前在 Black Hat 上的演讲其实只针对台湾群联的闪存主控芯片&mdash;&mdash;所以 2014 年年底，Nohl 还抽样了 8 大主要芯片制造商的主控芯片：群联、Alcor、瑞萨、祥硕（华硕的子公司）、创惟、FTDI、微芯、Cypress。</p>
+<p>结果发现情况异常复杂。的确有部分 USB 主控芯片对 BadUSB 免疫&mdash;&mdash;即无法对固件做重新编程，免疫的芯片占到抽样总数的一半，但每个品牌的表现都是很不稳定的。比如说，采用群联主控芯片的 U 盘都存在被 BadUSB 感染的风险，而祥硕则完全对 BadUSB 免疫，创惟的 USB 2.0 芯片没问题，但更新的 USB 3.0 芯片就有问题。其他 USB Hub、键盘、摄像头、鼠标等所用的控制芯片情况更是五花八门。而且实际上，即便是一个 USB 设备制造商的相同型号的产品，他们也会在不同批次中采用不一样的主控芯片，比如金士顿所用的 USB 控制芯片就有五六种之多。</p>
+<p>难不成以后我们要用 U 盘之前，都得先把 U 盘拆开看看主控芯片的型号不成？</p>
+<p><strong>只要是 USB 接口就都不安全！</strong></p>
+<p>不知道很多小伙伴有没有留意过，斯诺登当年揭露 NSA 的文档中提到了一款窃听设备名为 Cottonmouth（如下图所示）。这就是个 USB 设备，据说能够偷偷地往目标设备中安装恶意程序。虽然文档中并未详述其具体机制，但斯诺登说：&ldquo;如果 Nohl 和 Lell 发现的这种东西早就为 NSA 所用了，我也不会感到奇怪。&rdquo;或许很久之前，NSA 就已经在这么干了，那么我们手里的 U 盘&hellip;&hellip;</p>
+<p><img class="content-image" src="https://pic1.zhimg.com/25f01aefa86594c0a60876a6cef3ae7c_b.jpg" alt="" /></p>
+<p>但这还不是全部。既然 USB 标准是允许一个 USB 设备具有多种输入输出设备特征的，那么 USB 设备的伪装实际上也就不仅限于仅针对 U 盘的 BadUSB 了，各种 USB 设备都可能出现伪装的情况。从你的 USB 鼠标、键盘，到摄像头、电子烟、充电宝。</p>
+<p>除了文章开头提到的电子烟，2014 年年末央视曝光&ldquo;改装充电宝盗取隐私&rdquo;：看起来只是个充电宝，但实际上却有存储数据的能力，特别针对当时加密机制还没有现在这么完善的 iPhone 进行数据窃取。这么想来，我们周围但凡用 USB 接口的东西似乎都有带毒带马的可能性，这世界真是太残酷了&mdash;&mdash;说不定你已经被 NSA 锁定，你的鼠标就带 APT 木马&hellip;&hellip;</p>
+<p><img class="content-image" src="https://pic1.zhimg.com/d55ba6a6d3a06677bc21f8cd8cb3b6c0_b.jpg" alt="" /></p>
+<p><img class="content-image" src="https://pic1.zhimg.com/17ff55c3e7f71749753e37d719dd6bd4_b.jpg" alt="" /></p>
+<p>今年的 Black Hat USA 2016 大会上，分享丢 U 盘是否有效的 Elie Bursztein 不仅做了丢 U 盘的实验，而且还教育人们如何才能做个完整版的、伪装起来的 U 盘，那详细程度，从选购芯片到最终 U 盘外部材料成型一条龙，所用的都是成本很低的现成材料（<a class=" wrap external" href="https://link.zhihu.com/?target=https%3A//www.elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one" target="_blank" rel="nofollow noreferrer">点击这里</a>）。</p>
+<p>FreeBuf 先前也发表过一篇题为《<a class=" wrap external" href="https://link.zhihu.com/?target=http%3A//www.freebuf.com/sectool/107242.html" target="_blank" rel="nofollow noreferrer">利用 Arduino 快速制作 Tennsy BadUSB</a>》的文章，用 Arduino Leonardo 单片机（似成本稍高），配合 Arduino IDE 简单的代码编写，就做成了一个可伪装成普通 U 盘的 USB 攻击设备。以后要黑谁，送他个 U 盘或充电宝，比邮件钓鱼大概有效多了。</p>
+<p><strong>USB 攻击的究极形态</strong></p>
+<p>Bursztein 在 Black Hat USA 2016 大会上将 USB 攻击分成了 3 大类，分别是社会工程（丢 U 盘），HID 伪装和 0-day 漏洞利用。前两种我们都已经在前文做了简单的分析，最后一种 0-day 漏洞利用，他只稍作了解释，主要利用的是 USB 驱动的 0-day 漏洞，只要计算机插上 USB 设备，就能立刻对计算机进行控制。</p>
+<p><img class="content-image" src="https://pic4.zhimg.com/914e06afe6ec7f28866fd2a979180f8f_b.jpg" alt="" /></p>
+<p>在他看来，0-day 漏洞乃是 USB 攻击的究级形态，无论是复杂程度、可靠性还是隐蔽性都达到了至高境界（虽然因为针对性强，所以跨平台属性不佳）。我们能够列举的此类案例实在稀有，因为这几乎没有被广范围探讨过。之前名噪一时的 Stuxnet 震网病毒，就利用了 USB（但似并非 USB 驱动的 0-day 漏洞）传播&mdash;&mdash;Windows 系统中，.lnk 文件负责渲染 U 盘中的文件图标，插入 U 盘的时候，资源管理器就会扫描其中的 .lnk 文件来显示各种格式的文件，震网病毒就是将恶意程序插入到 .lnk 文件中&mdash;&mdash;整个过程是插入就执行的，所以其隐蔽性自然可见一斑。</p>
+<p><img class="content-image" src="https://pic2.zhimg.com/60498104002a1f7394589afd69d5b995_b.jpg" alt="" /></p>
+<p>不过这种例子实在稀有，大约需要投入大量时间和精力，极具针对性地进行攻击研究。对一般人来说，U 盘钓鱼和 HID 伪装的确才是最需要防范的。但在我们谈了这么多以后，是否还要说说 USB 安全的注意事项呢？</p>
+<p>像 Nohl 说的，防范 USB 攻击的最佳方案就是不要用 USB 设备！为了这个目标，就请封死设备上的所有 USB 接口吧&hellip;&hellip;说正经的，因噎废食当然不好，但来路不明的 U 盘甚至充电宝、电子烟都不要用，马路上出现 U 盘，也请忽略之；自己的 USB 设备也不要去插不受信任的主机设备。用户能做的，大概也只有这些了吧。</p>
+<p>* FreeBuf 专题报道，作者 / 欧阳洋葱，未经许可禁止转载</p>
+
+<div class="view-more"><a target="_self" href="http://zhuanlan.zhihu.com/p/22035883">查看知乎原文</a></div>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="question">
+<div class="answer">
+<div class="content">
+<p>客官，这篇文章有意思吗？</p>
+<p dir="ltr"><a href="https://daily.zhihu.com/download?utm_source=article_suffix&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">好玩！下载 App 接着看 (๑&bull;ㅂ&bull;) ✧</a></p>
+<p><a href="/story/8688575?utm_source=other_article&amp;utm_campaign=tuijian&amp;utm_medium=daily_share">再逛逛吧 ˊ_&gt;ˋ</a></p>
+</div>
+</div>
+</div>
+
+</div>
+<div class="qr">
+<h2 class="heading">扫描二维码下载知乎日报</h2>
+<span class="subheading">支持 iOS 和 Android</span>
+<div class="qr-wrap">
+<img src="http://static.daily.zhihu.com/img/qr1.png" alt="二维码下载知乎日报" width="148" height="148">
+</div>
+</div>
+</div>
+
+<div class="bottom-wrap">
+<div class="bottom-recommend">
+<span class="bottom-recommend-title">阅读更多</span>
+<a class="recommend-link" href="http://daily.zhihu.com/story/8893434" data-story="8893434">
+
+<span style="background-image:url(http://pic1.zhimg.com/da6f16365ceab17e3eedadecac5eb9d4.jpg)" class="link-image"></span>
+
+试验了只有 300 块伙食费的一个月，吃得还挺好啊
+</a>
+<a class="bottom-recommend-download-link" href="/download">
+下载 「知乎日报」 客户端查看更多
+</a>
+</div>
+</div>
+
+<div class="footer">
+<a href="http://www.zhihu.com/">知乎网</a> &middot; &copy; 2016 知乎
+</div>
+<script src="http://static.daily.zhihu.com/js/jquery.1.9.1.js"></script>
+<script src="/js/share.js?v=49768"></script>
+
+</body>
+</html>
